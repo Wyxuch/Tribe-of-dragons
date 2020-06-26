@@ -1,8 +1,7 @@
 import React from "react";
-import King from "./King";
-import Queen from "./Queen";
-import MaleOffspring from "./MaleOffspring";
-import FemaleOffspring from "./FemaleOffspring";
+import "../../style/Home.css";
+import King from "../../containers/Home/King";
+import OffspringList from "../../containers/Home/OffspringList";
 import LoadingBar from "../../containers/Home/LoadingBar";
 // import PropTypes from "prop-types";
 
@@ -16,15 +15,15 @@ const Home = ({ active }) => {
     >
       <div className="LRWrapper">
         <div className="LRElement">
-          <King />
+          <King gender={"male"} />
           <LoadingBar gender={"male"} />
-          <MaleOffspring />
+          <OffspringList gender={"male"} />
         </div>
 
         <div className="LRElement">
-          <Queen />
+          <King gender={"female"} />
           <LoadingBar gender={"female"} />
-          <FemaleOffspring />
+          <OffspringList gender={"female"} />
         </div>
       </div>
     </div>

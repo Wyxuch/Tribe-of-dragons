@@ -1,8 +1,11 @@
+import { OffspringButtons } from "../constants";
+
 const initialState = {
   fps: 0,
   timeStamp: 0,
   nextMaleOffspringCounter: 0,
   nextFemaleOffspringCounter: 0,
+  hatchingTime: 25,
   king: {
     name: "Ad'Am",
     attack: 1,
@@ -30,6 +33,8 @@ const game = (state = initialState, action) => {
   switch (action.type) {
     case "GAME_TICK":
       return process(state, action);
+    case "OFFSPRING_ACTION":
+      return offspringAction(state, action);
     default:
       return state;
   }
@@ -39,7 +44,7 @@ export default game;
 
 // MAIN FUNCTION
 const process = (state, action) => {
-  const nextState = state;
+  const nextState = { ...state };
 
   const timePassed = (action.timeStamp - state.timeStamp) / 1000;
 
@@ -55,9 +60,8 @@ const process = (state, action) => {
 
   nextState.nextFemaleOffspringCounter =
     state.nextFemaleOffspringCounter + timePassed;
-  console.log(state);
 
-  if (nextState.nextMaleOffspringCounter >= 10) {
+  if (nextState.nextMaleOffspringCounter >= state.hatchingTime) {
     const offspringArrLength = state.maleOffspring
       ? state.maleOffspring.length
       : 0;
@@ -69,15 +73,15 @@ const process = (state, action) => {
         state.king,
         state.queen
       );
-      nextState.maleOffspring.push(offspring);
+      nextState.maleOffspring = [...state.maleOffspring, offspring];
 
       nextState.nextMaleOffspringCounter = 0;
     } else {
-      nextState.nextMaleOffspringCounter = 10;
+      nextState.nextMaleOffspringCounter = state.hatchingTime;
     }
   }
 
-  if (nextState.nextFemaleOffspringCounter >= 10) {
+  if (nextState.nextFemaleOffspringCounter >= state.hatchingTime) {
     const offspringArrLength = state.femaleOffspring
       ? state.femaleOffspring.length
       : 0;
@@ -89,17 +93,53 @@ const process = (state, action) => {
         state.king,
         state.queen
       );
-      nextState.femaleOffspring.push(offspring);
+      nextState.femaleOffspring = [...state.femaleOffspring, offspring];
 
       nextState.nextFemaleOffspringCounter = 0;
     } else {
-      nextState.nextFemaleOffspringCounter = 10;
+      nextState.nextFemaleOffspringCounter = state.hatchingTime;
     }
   }
 
   return nextState;
 };
 
+// OFFSPRING MENU ACTIONS
+const offspringAction = (state, action) => {
+  const nextState = { ...state };
+
+  const isMale = action.gender === "male" ? true : false;
+  const arrayName = isMale ? "maleOffspring" : "femaleOffspring";
+  const kingOrQueen = isMale ? "king" : "queen";
+  const index = action.index;
+  switch (action.button) {
+    case OffspringButtons.OFFSPRING_KILL:
+      nextState[arrayName] = state[arrayName].filter((el, i) => i !== index);
+      break;
+    case OffspringButtons.OFFSPRING_HUNT:
+      console.log("not implemented");
+      break;
+    case OffspringButtons.OFFSPRING_WAR:
+      console.log("not implemented");
+      break;
+    case OffspringButtons.OFFSPRING_PROMOTE:
+      nextState[arrayName] = state[arrayName].filter((el, i) => {
+        if (i !== index) {
+          return el;
+        } else {
+          nextState[kingOrQueen] = el;
+          return null;
+        }
+      });
+      break;
+    default:
+      return state;
+  }
+
+  return nextState;
+};
+
+// UTILS
 const newOffspring = (arrLength = 0, gender, king, queen) => {
   const attack = getStat((king.attack + queen.attack) / 2);
   const protection = getStat((king.protection + queen.protection) / 2);

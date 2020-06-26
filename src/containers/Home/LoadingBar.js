@@ -2,7 +2,11 @@ import { connect } from "react-redux";
 import LoadingBar from "../../components/Home/LoadingBar";
 
 const mapStateToProps = (state, ownProps) => ({
-  active: ownProps.tab === state.visibilityTab,
+  progress:
+    ownProps.gender === "male"
+      ? state.game.nextMaleOffspringCounter
+      : state.game.nextFemaleOffspringCounter,
+  hatchingTime: state.game.hatchingTime,
 });
 
-export default connect()(LoadingBar);
+export default connect(mapStateToProps)(LoadingBar);
