@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Home from "../components/Home";
+import Home from "../components/Home/Home";
 
 const mapStateToProps = (state, ownProps) => ({
   active: ownProps.tab === state.visibilityTab,

@@ -4,4 +4,34 @@
 
 .menuButton {
   flex-basis: 25%;
+
+  background-image: url("../img/untitled.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(255, 237, 200);
+  margin: 1px;
+
+  border: 0;
+
+  font-weight: 600;
+  font-family: pangolin, sans-serif;
+  font-size: 0.9rem;
+}
+.menuButton:disabled {
+  background-color: rgb(255, 237, 200);
+  color: rgb(47, 43, 38);
+}
+.menuButton:disabled > p {
+  transform: rotate(15deg);
+  transition: ease-in-out 0.3s;
+}
+
+@media (orientation: landscape) {
+  #menu {
+    flex-direction: column;
+  }
+  .menuButton {
+    font-size: 1.4rem;
+  }
 }

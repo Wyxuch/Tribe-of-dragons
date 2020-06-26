@@ -3,4 +3,4 @@ export const setVisibilityTab = (tab) => ({
   tab,
 });
 
-export const gameTick = () => ({ type: "GAME_TICK" });
+export const gameTick = (timeStamp) => ({ type: "GAME_TICK", timeStamp });

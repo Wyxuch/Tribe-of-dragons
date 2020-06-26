@@ -5,6 +5,7 @@ html {
 }
 
 body {
+  background-color: rgb(255, 237, 200);
   height: 100%;
 }
 
@@ -29,10 +30,31 @@ body {
   flex-basis: 12%;
 }
 
+.LRWrapper {
+  display: flex;
+}
+
+.LRElement {
+  flex-basis: 50%;
+}
+
+@media (orientation: landscape) {
+  #app {
+    flex-direction: row;
+  }
+}
+
 /* CSS RESET */
+
+@font-face {
+  font-family: pangolin;
+  src: url("../img/Pangolin-Regular.ttf");
+}
+
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 1rem;
+  font-family: pangolin, sans-serif;
 }
 
 *,

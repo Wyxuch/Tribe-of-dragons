@@ -13,9 +13,13 @@ import { gameTick } from "../actions";
 function App() {
   const dispatch = useDispatch();
 
-  setInterval(() => {
-    dispatch(gameTick());
-  }, 1000);
+  // GAME LOOP
+  window.requestAnimationFrame(gameLoop);
+
+  function gameLoop(timeStamp) {
+    dispatch(gameTick(timeStamp));
+    window.requestAnimationFrame(gameLoop);
+  }
 
   return (
     <div className="App" id="app">

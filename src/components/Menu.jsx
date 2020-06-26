@@ -8,19 +8,19 @@ const Menu = ({ setTab }) => {
   return (
     <div id="menu">
       <MenuButton onClick={setTab} tab={VisibleTabs.SHOW_HOME}>
-        Home
+        <p>Home</p>
       </MenuButton>
       <MenuButton onClick={setTab} tab={VisibleTabs.SHOW_LAIR}>
-        Lair
+        <p>Lair</p>
       </MenuButton>
       <MenuButton onClick={setTab} tab={VisibleTabs.SHOW_HUNT}>
-        Hunt
+        <p>Hunt</p>
       </MenuButton>
       <MenuButton onClick={setTab} tab={VisibleTabs.SHOW_CONQUEST}>
-        Conquest
+        <p>Conquest</p>
       </MenuButton>
       <MenuButton onClick={setTab} tab={VisibleTabs.SHOW_SETTINGS}>
-        Settings
+        <p>Settings</p>
       </MenuButton>
     </div>
   );

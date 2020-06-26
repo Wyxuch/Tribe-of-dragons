@@ -1,15 +1,19 @@
 const initialState = {
-  counter: 0,
+  fps: 0,
+  timeStamp: 0,
 };
 
-const game = (state, action) => {
+const game = (state = initialState, action) => {
   switch (action.type) {
     case "GAME_TICK":
+      console.log((action.timeStamp - state.timeStamp) / 1000);
+      const secondsPassed = (action.timeStamp - state.timeStamp) / 1000;
       return {
-        counter: state.counter + 1,
+        timeStamp: action.timeStamp,
+        fps: Math.round(1 / secondsPassed),
       };
     default:
-      return initialState;
+      return state;
   }
 };
 
