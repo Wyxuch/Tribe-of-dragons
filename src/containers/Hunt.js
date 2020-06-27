@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Hunt from "../components/Hunt";
+import Hunt from "../components/Hunt/Hunt";
 
 const mapStateToProps = (state, ownProps) => ({
   active: ownProps.tab === state.visibilityTab,

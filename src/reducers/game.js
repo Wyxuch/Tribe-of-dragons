@@ -1,11 +1,11 @@
-import { OffspringButtons } from "../constants";
+import { OffspringButtons, femaleNames, maleNames } from "../constants";
 
 const initialState = {
   fps: 0,
   timeStamp: 0,
   nextMaleOffspringCounter: 0,
   nextFemaleOffspringCounter: 0,
-  hatchingTime: 25,
+  hatchingTime: 7,
   king: {
     name: "Ad'Am",
     attack: 1,
@@ -26,7 +26,7 @@ const initialState = {
   },
   maleOffspring: [],
   femaleOffspring: [],
-  maxOffspring: 2,
+  maxOffspring: 3,
 };
 
 const game = (state = initialState, action) => {
@@ -67,12 +67,7 @@ const process = (state, action) => {
       : 0;
 
     if (!(offspringArrLength >= state.maxOffspring)) {
-      const offspring = newOffspring(
-        offspringArrLength,
-        true,
-        state.king,
-        state.queen
-      );
+      const offspring = newOffspring(maleNames, true, state.king, state.queen);
       nextState.maleOffspring = [...state.maleOffspring, offspring];
 
       nextState.nextMaleOffspringCounter = 0;
@@ -88,7 +83,7 @@ const process = (state, action) => {
 
     if (!(offspringArrLength >= state.maxOffspring)) {
       const offspring = newOffspring(
-        offspringArrLength,
+        femaleNames,
         false,
         state.king,
         state.queen
@@ -140,7 +135,7 @@ const offspringAction = (state, action) => {
 };
 
 // UTILS
-const newOffspring = (arrLength = 0, gender, king, queen) => {
+const newOffspring = (randomNamesArr, gender, king, queen) => {
   const attack = getStat((king.attack + queen.attack) / 2);
   const protection = getStat((king.protection + queen.protection) / 2);
   const agility = getStat((king.agility + queen.agility) / 2);
@@ -148,7 +143,7 @@ const newOffspring = (arrLength = 0, gender, king, queen) => {
   const score = (attack + protection + agility + magic) / 4;
 
   return {
-    name: arrLength,
+    name: getRandomName(randomNamesArr),
     attack: attack,
     protection: protection,
     agility: agility,
@@ -182,4 +177,11 @@ const getStat = (stat) => {
       return nextStat;
     }
   }
+};
+
+const getRandomName = (randomNamesArr) => {
+  const min = 0;
+  const max = randomNamesArr.length;
+  const randomNumber = Math.ceil(Math.random() * (max - min) + min);
+  return randomNamesArr[randomNumber];
 };

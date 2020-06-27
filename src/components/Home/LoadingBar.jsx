@@ -3,7 +3,13 @@ import React from "react";
 
 const LoadingBar = ({ progress, hatchingTime }) => (
   <div>
-    <div>{((progress * 100) / hatchingTime).toFixed()}%</div>
+    <div className="loadingBar">
+      {((progress * 100) / hatchingTime).toFixed()}%
+      <div
+        className="loadingBarBg"
+        style={{ width: ((progress * 100) / hatchingTime).toFixed() + "%" }}
+      ></div>
+    </div>
   </div>
 );
 // Calc.propTypes = {

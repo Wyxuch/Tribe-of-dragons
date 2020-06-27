@@ -2,7 +2,9 @@ import React from "react";
 // import PropTypes from "prop-types";
 
 const OffspringButton = ({ children, setOffspringAction }) => (
-  <button onClick={setOffspringAction}>{children}</button>
+  <button className="offspringButton" onClick={setOffspringAction}>
+    {children}
+  </button>
 );
 
 // MenuButton.propTypes = {

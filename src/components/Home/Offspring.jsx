@@ -6,14 +6,16 @@ import { OffspringButtons } from "../../constants";
 const Offspring = ({ stats, index, gender }) => (
   <div className="offspring">
     <div className="offspringWrapper">
-      <div className="offspringPicture"></div>
+      <div className="offspringPicture">
+        <p>{stats.name}</p>
+      </div>
       <div className="offspringStats">
-        <p className="score">{stats.score.toFixed(1)}</p>
-        <p className="attack">{stats.attack.toFixed(1)}</p>
-        <p className="agility">{stats.agility.toFixed(1)}</p>
-        <p className="protection">{stats.protection.toFixed(1)}</p>
-        <p className="magic">{stats.magic.toFixed(1)}</p>
-        <p className="mutations">{index}</p>
+        <p className="score stat">{stats.score.toFixed(1)}</p>
+        <p className="attack stat">{stats.attack.toFixed(1)}</p>
+        <p className="agility stat">{stats.agility.toFixed(1)}</p>
+        <p className="protection stat">{stats.protection.toFixed(1)}</p>
+        <p className="magic stat">{stats.magic.toFixed(1)}</p>
+        <p className="mutations stat">{index}</p>
       </div>
     </div>
     <div className="offspringMenu">
@@ -22,28 +24,28 @@ const Offspring = ({ stats, index, gender }) => (
         index={index}
         gender={stats.gender}
       >
-        Kill
+        K
       </OffspringButton>
       <OffspringButton
         button={OffspringButtons.OFFSPRING_HUNT}
         index={index}
         gender={stats.gender}
       >
-        Work
+        W
       </OffspringButton>
       <OffspringButton
         button={OffspringButtons.OFFSPRING_WAR}
         index={index}
         gender={stats.gender}
       >
-        War
+        C
       </OffspringButton>
       <OffspringButton
         button={OffspringButtons.OFFSPRING_PROMOTE}
         index={index}
         gender={stats.gender}
       >
-        Promo
+        P
       </OffspringButton>
     </div>
   </div>
