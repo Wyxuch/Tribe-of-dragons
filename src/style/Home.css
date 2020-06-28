@@ -25,7 +25,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../img/dragonTemplate.png);
+  background-image: url(../img/dragonElements/templateCropped.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -155,7 +155,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../img/dragonTemplate.png);
+  background-image: url(../img/dragonElements/templateCropped.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
