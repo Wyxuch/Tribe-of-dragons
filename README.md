@@ -20,7 +20,7 @@ Basic goals of the game are: breedeing your strongest dragons, sending them hunt
 </ul>
 
 
-Unfortunately i'm short on resources and necessary hardware for drawing graphics, so it can take some time :/
+Finishing game can take some time cause it's solo project and making graphics takes time :/
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
