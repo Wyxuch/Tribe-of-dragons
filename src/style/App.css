@@ -5,7 +5,10 @@ html {
 }
 
 body {
-  background-image: url("../img/bg.svg");
+  background-image: url("../img/backgroundStone.svg");
+  background-size: 35%;
+
+  background-color: #6e6e6e;
   height: 100%;
 }
 
@@ -27,6 +30,7 @@ body {
   overflow: scroll;
 
   padding-bottom: 14vh;
+  padding-top: 5vh;
 }
 
 #menu {

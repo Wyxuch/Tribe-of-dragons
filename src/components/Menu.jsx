@@ -1,26 +1,29 @@
 import React from "react";
 import "../style/Menu.css";
 import MenuButton from "../containers/MenuButton";
+
 import { VisibleTabs } from "../constants";
+
+import icon from "../img/settingsIcon.svg";
 // import PropTypes from "prop-types";
 
 const Menu = ({ setTab }) => {
   return (
     <div id="menu">
       <MenuButton onClick={setTab} tab={VisibleTabs.SHOW_HOME}>
-        <p>Home</p>
+        homeButton
       </MenuButton>
       <MenuButton onClick={setTab} tab={VisibleTabs.SHOW_LAIR}>
-        <p>Lair</p>
+        lairButton
       </MenuButton>
       <MenuButton onClick={setTab} tab={VisibleTabs.SHOW_HUNT}>
-        <p>Hunt</p>
+        huntButton
       </MenuButton>
       <MenuButton onClick={setTab} tab={VisibleTabs.SHOW_CONQUEST}>
-        <p>Conquest</p>
+        conquestButton
       </MenuButton>
       <MenuButton onClick={setTab} tab={VisibleTabs.SHOW_SETTINGS}>
-        <p>Settings</p>
+        settingsButton
       </MenuButton>
     </div>
   );

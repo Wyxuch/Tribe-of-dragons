@@ -13,6 +13,8 @@
 .menuButton {
   flex-basis: 25%;
 
+  position: relative;
+
   background-image: url("../img/untitled.svg");
   background-color: transparent;
   background-size: contain;
@@ -33,6 +35,91 @@
 .menuButton:disabled > p {
   transform: rotate(15deg);
   transition: ease-in-out 0.3s;
+}
+
+#homeButton::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 15% 15% 25% 15%;
+  display: block;
+  height: 70%;
+  width: 70%;
+
+  content: "";
+
+  background-image: url("../img/homeIcon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#lairButton::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 15% 20% 25% 20%;
+  display: block;
+  height: 60%;
+  width: 60%;
+
+  content: "";
+
+  background-image: url("../img/lairIcon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#huntButton::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 10% 15% 30% 15%;
+  display: block;
+  height: 70%;
+  width: 70%;
+
+  content: "";
+
+  background-image: url("../img/huntIcon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#conquestButton::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 15% 20% 25% 20%;
+  display: block;
+  height: 60%;
+  width: 60%;
+
+  content: "";
+
+  background-image: url("../img/conquestIcon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#settingsButton::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 15% 20% 25% 20%;
+  display: block;
+  height: 60%;
+  width: 60%;
+
+  content: "";
+
+  background-image: url("../img/settingsIcon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media (orientation: landscape) {

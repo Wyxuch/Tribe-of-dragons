@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="lairIcon.svg"
+   id="svg2585"
+   version="1.1"
+   viewBox="0 0 131.51556 131.79778"
+   height="131.79778mm"
+   width="131.51556mm">
+  <defs
+     id="defs2579">
+    <inkscape:path-effect
+       message="Jeśli po konwersji przycięcia na ścieżki nie zostanie spłaszczony wynik, użyj reguły wypełniania w oknie dialogowym &lt;b&gt;wypełnienie i obrys&lt;/b&gt; ."
+       hide_clip="false"
+       flatten="false"
+       inverse="true"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect3235"
+       effect="powerclip" />
+    <clipPath
+       id="clipPath3231"
+       clipPathUnits="userSpaceOnUse">
+      <ellipse
+         d="m 118.81723,198.56082 a 16.169806,27.662395 0 0 1 -16.16981,27.6624 16.169806,27.662395 0 0 1 -16.169803,-27.6624 16.169806,27.662395 0 0 1 16.169803,-27.66239 16.169806,27.662395 0 0 1 16.16981,27.66239"
+         clip-path="none"
+         ry="27.662395"
+         rx="16.169806"
+         cy="198.56082"
+         cx="102.64742"
+         id="ellipse3233"
+         style="display:none;opacity:1;fill:#77001b;fill-opacity:1;stroke:none;stroke-width:18.5208;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         d="M 30.362661,72.765473 H 171.48496 V 214.01973 H 30.362661 Z M 118.81723,198.56082 a 16.169806,27.662395 0 0 0 -16.16981,-27.66239 16.169806,27.662395 0 0 0 -16.169803,27.66239 16.169806,27.662395 0 0 0 16.169803,27.6624 16.169806,27.662395 0 0 0 16.16981,-27.6624"
+         class="powerclip"
+         style="opacity:1;fill:#77001b;fill-opacity:1;stroke:none;stroke-width:18.5208;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="lpe_path-effect3235" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     showguides="false"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="1272"
+     inkscape:window-height="987"
+     inkscape:window-width="1680"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="295.38628"
+     inkscape:cx="375.7543"
+     inkscape:zoom="0.98994949"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata2582">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-35.161861,-77.354088)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Warstwa 1">
+    <path
+       inkscape:original-d="M 35.362661,209.00792 73.90442,105.32433 96.394003,149.54754 124.1669,77.765473 166.48496,209.01973 Z"
+       inkscape:path-effect="#path-effect3235"
+       clip-path="url(#clipPath3231)"
+       sodipodi:nodetypes="cccccc"
+       id="path3219"
+       d="M 35.362661,209.00792 73.90442,105.32433 96.394003,149.54754 124.1669,77.765473 166.48496,209.01973 Z"
+       style="fill:#77461b;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1" />
+  </g>
+</svg>

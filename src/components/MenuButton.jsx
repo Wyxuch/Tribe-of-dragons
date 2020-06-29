@@ -2,9 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const MenuButton = ({ active, children, setTab }) => (
-  <button className="menuButton" onClick={setTab} disabled={active}>
-    {children}
-  </button>
+  <button
+    className="menuButton"
+    id={children}
+    onClick={setTab}
+    disabled={active}
+  ></button>
 );
 
 MenuButton.propTypes = {

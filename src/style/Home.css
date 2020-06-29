@@ -4,6 +4,9 @@
   border-radius: 3%;
   padding: 2%;
   background-color: #bf722e;
+
+  background-image: url("../img/woodBackgroundBrown.svg");
+  background-size: 85%;
 }
 
 .mainPicture {
@@ -54,6 +57,8 @@
 .stat {
   border: 1px solid #000000;
   margin: 1px;
+  background-image: url("../img/woodBackgroundgGrey.svg");
+  background-size: 100%;
 }
 
 .attack {
@@ -119,6 +124,8 @@
   top: 0;
   left: 0;
   background-color: #bf722e;
+  background-image: url("../img/woodBackgroundBrown.svg");
+  background-size: 50%;
   z-index: -1;
 }
 
@@ -127,6 +134,9 @@
   border: 3px solid #000000;
   border-radius: 3%;
   padding: 2%;
+
+  background-image: url("../img/woodBackgroundBrown.svg");
+  background-size: 85%;
   background-color: #bf722e;
   margin-bottom: 10px;
 }

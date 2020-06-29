@@ -8,6 +8,8 @@ import Conquest from "../containers/Conquest";
 import Lair from "../containers/Lair";
 import Hunt from "../containers/Hunt";
 import Settings from "../containers/Settings";
+import TopNav from "../containers/TopNav";
+
 import { gameTick } from "../actions";
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
 
   return (
     <div className="App" id="app">
+      <TopNav />
       <div id="mainView">
         <Home tab={constants.VisibleTabs.SHOW_HOME} />
         <Lair tab={constants.VisibleTabs.SHOW_LAIR} />
