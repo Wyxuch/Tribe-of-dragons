@@ -25,4 +25,5 @@ Unfortunately i'm short on resources and necessary hardware for drawing graphics
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+A little sneak peak of how it looks right now. 
 ![example](https://github.com/Wyxuch/Tribe-of-dragons/blob/master/example.PNG?raw=true)
