@@ -10,7 +10,10 @@ const Offspring = ({ stats, index, gender }) => (
         <p>{stats.name}</p>
       </div>
       <div className="offspringStats">
-        <p className="score stat">{stats.score.toFixed(1)}</p>
+        <p className="score stat">
+          <div className="icon" />
+          {stats.score.toFixed(1)}
+        </p>
         <p className="attack stat">{stats.attack.toFixed(1)}</p>
         <p className="agility stat">{stats.agility.toFixed(1)}</p>
         <p className="protection stat">{stats.protection.toFixed(1)}</p>
